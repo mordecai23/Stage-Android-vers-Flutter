@@ -4,10 +4,10 @@ void main() {
   runApp(MyApp());
 }
 
-class parametre {
+class Parametre {
   String depart;
   String arrive;
-  parametre(this.depart, this.arrive);
+  Parametre(this.depart, this.arrive);
 }
 
 class MyApp extends StatelessWidget {
@@ -44,7 +44,7 @@ class Activite2State extends State<Activite2> {
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)!.settings.arguments as parametre;
+    final args = ModalRoute.of(context)!.settings.arguments as Parametre;
     String depart = args.depart;
     String arrive = args.arrive;
     String res = "Les horaires de " + depart + "-" + arrive;
@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             String depart = controllerdepart.text;
                             String arrive = controllerarrive.text;
                             Navigator.pushNamed(context, '/activite2',
-                                arguments: parametre(depart, arrive));
+                                arguments: Parametre(depart, arrive));
                           },
                           child: Text('Oui'),
                         ),
