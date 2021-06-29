@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Application flutter 1',
+        title: 'Application flutter test',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
@@ -110,6 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             TextFormField(
               controller: controllerdepart,
+              // ignore: deprecated_member_use
               cursorColor: Theme.of(context).cursorColor,
               decoration: InputDecoration(
                 labelText: 'Ville de départ',
@@ -120,6 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextFormField(
               controller: controllerarrive,
+              // ignore: deprecated_member_use
               cursorColor: Theme.of(context).cursorColor,
               decoration: InputDecoration(
                 labelText: "Ville d'arrivée",
@@ -137,6 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       title: Text('Confirmation'),
                       content: Text('Voulez vous envoyer le formulaire ?'),
                       actions: [
+                        // ignore: deprecated_member_use
                         FlatButton(
                           textColor: Colors.blue,
                           onPressed: () {
@@ -147,6 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                           child: Text('Oui'),
                         ),
+                        // ignore: deprecated_member_use
                         FlatButton(
                           textColor: Colors.blue,
                           onPressed: () {},
